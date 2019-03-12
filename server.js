@@ -3,11 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
-
+const cors = require('cors');
 
 // initializes express
 const app = express();
-
+app.use(cors());
 //initializes body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
