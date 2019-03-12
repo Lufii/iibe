@@ -20,7 +20,7 @@ require('./routes/routes.js')(app);
 MongoClient.connect('mongodb://1PlutoArtemis:1PlutoArtemis@ds149894.mlab.com:49894/iidb', { useNewUrlParser: true }, (err, client) =>{
   if(err) return console.log(err);
   db = client.db('iidb');
-  app.listen(72, function(){
+  app.listen(process.env.PORT||72, function(){
   console.log('Ignition, port 72');
   })
 })
