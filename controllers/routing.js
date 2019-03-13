@@ -24,7 +24,7 @@ module.exports = {
   },
 
   editPerson: (req,res) => {
-    db.collection('people').updateOne({'id':parseInt(req.body.id), 'name':req.body.name, 'username':req.body.username, 'email':req.body.email, 'phone':req.body.phone}, {
+    db.collection('people').updateOne({'id':parseInt(req.body.id)}, {
       $set: {
       "id":req.body.nid,
       "name":req.body.nname,
