@@ -60,11 +60,7 @@ module.exports = {
 
   deletePerson: (req,res) => {
     db.collection('people').deleteOne({
-    'id':parseInt(req.body.id),
-    'name':req.body.name,
-    'username':req.body.username,
-    'email':req.body.email,
-    'phone':req.body.phone
+    'id':parseInt(req.body.id)
     }, (err, result) => {
       if (err) return console.log(err);
       console.log('Deleted person from DB', result);
